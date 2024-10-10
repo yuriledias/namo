@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f0f8ff, #ffb6c1);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        h1 {
+            font-size: 60px;
+            color: #ff69b4;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+            animation: pulsate 1.5s infinite alternate ease-in-out, rainbowText 4s linear infinite;
+            cursor: pointer;
+        }
+
+        h1:hover {
+            color: #ff1493;
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        @keyframes pulsate {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes rainbowText {
+            0% {
+                color: #ff69b4;
+            }
+            20% {
+                color: #ff1493;
+            }
+            40% {
+                color: #ff6347;
+            }
+            60% {
+                color: #ff4500;
+            }
+            80% {
+                color: #ff69b4;
+            }
+            100% {
+                color: #ff1493;
+            }
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff69b4;
+            clip-path: polygon(50% 0%, 61% 22%, 98% 35%, 75% 63%, 82% 100%, 50% 80%, 18% 100%, 25% 63%, 2% 35%, 39% 22%);
+            animation: float 5s infinite ease-in-out;
+            opacity: 0.8;
+            transform: scale(1) rotate(0deg);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-50vh) rotate(180deg) scale(1);
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-duration: 6s;
+            animation-delay: 0s;
+        }
+        
+        .heart:nth-child(2) {
+            left: 20%;
+            animation-duration: 8s;
+            animation-delay: 1s;
+        }
+        
+        .heart:nth-child(3) {
+            left: 30%;
+            animation-duration: 5s;
+            animation-delay: 2s;
+        }
+        
+        .heart:nth-child(4) {
+            left: 40%;
+            animation-duration: 7s;
+            animation-delay: 3s;
+        }
+        
+        .heart:nth-child(5) {
+            left: 50%;
+            animation-duration: 4s;
+            animation-delay: 4s;
+        }
+
+        .heart:nth-child(6) {
+            left: 60%;
+            animation-duration: 9s;
+            animation-delay: 5s;
+        }
+
+        .heart:nth-child(7) {
+            left: 70%;
+            animation-duration: 6s;
+            animation-delay: 6s;
+        }
+
+        .heart:nth-child(8) {
+            left: 80%;
+            animation-duration: 10s;
+            animation-delay: 7s;
+        }
+
+        .heart:nth-child(9) {
+            left: 90%;
+            animation-duration: 5s;
+            animation-delay: 8s;
+        }
+
+        /* Adicionando mais animações ao fundo */
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            background: rgba(255, 105, 180, 0.5);
+            bottom: 0;
+            left: 0;
+            animation: wave 4s infinite linear;
+            transform: translateY(100%);
+        }
+
+        .wave:nth-child(odd) {
+            background: rgba(255, 105, 180, 0.3);
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translateX(0) translateY(100%);
+            }
+            50% {
+                transform: translateX(-50%) translateY(95%);
+            }
+            100% {
+                transform: translateX(-100%) translateY(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Eu te amo, Luma amor da minha vida!</h1>
+    <!-- Corações flutuantes -->
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <!-- Ondas animadas -->
+    <div class="wave"></div>
+    <div class="wave"></div>
+</body>
+</html>
